@@ -1,0 +1,9 @@
+<h1> All Ads</h1>
+<ul>
+	<% for ad in @ads %>	
+	  <li> 
+      <a href="/ads/<%= ad.id %>"> <%= ad.name %> </a> &nbsp&nbsp
+      <%=link_to "Delete",ad_path(ad.id), :method => :delete, :class => "delete", :confirm => "Are you sure ?"%>
+    </li>
+	<% end %>
+</ul>
